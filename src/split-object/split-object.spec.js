@@ -42,9 +42,10 @@ describe('Splits an object into multiple objects with one key/value pair each', 
     });
 
     test('return an new array to the new object array', () => {
-      expect(
-        splitObject({ id: 1, name: '1-First' }),
-      ).toEqual([{ id: 1 }, { name: '1-First' }]);
+      expect(splitObject({ id: 1, name: '1-First' })).toEqual([
+        { id: 1 },
+        { name: '1-First' },
+      ]);
     });
 
     test('return an empties object to the new empties arrays ', () => {
