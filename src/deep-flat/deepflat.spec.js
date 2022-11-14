@@ -33,10 +33,4 @@ describe('should flat all our array in one nested array', () => {
     const received = deepFlat(['a', ['b', [['c'], ['d']], 'e']]);
     expect(received).toEqual(expected);
   });
-  // removes holes in the array
-  it('nested alphabets', () => {
-    const expected = [1, 2, 4, 5];
-    const received = deepFlat([1, 2, , 4, 5]);
-    expect(received).toEqual(expected);
-  });
 });
