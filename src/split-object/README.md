@@ -5,31 +5,54 @@ key/value pair from the object.
 
 ---
 
-Here's a starter docstring for your solutions. Feel free to rewrite it if that
-helps you understand:
+## Strategy
+
+I use to minimal tool for working with Objects using built-in functional Array
+methods.
+
+---
+
+## Implementation
+
+There are few things to consider with `split-object`.
+
+- Throw which can create a custom error or throw an exception, which you can
+  find in this
+  [link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
+  for more understanding.
+- Using `Object.keys().map()` an Array of the form `[key]: value[key]`, can be
+  natural & convenient structure.
+- I might see some better methods for iterating over Objects in this
+  [Mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split).
+
+---
+
+## Use Cases
+
+My function in this case is similar to a procedure set of statements that
+performs a task of object.
 
 ```js
-/**
- * Splits an object into multiple objects with one key/value pair each.
- * The new objects are returned in an array.
- *
- * This function has no side-effects, the argument object is not modified
- *
- * @param {Object} [toSeparate={}] - The object to split into key/value pairs.
- * @returns {Array} Returns a new array with one entry for each key/value pair.
- * @example
- *
- * splitObject({ a: 1, b: 2, c: 3 });
- * // -> [{ a: 1 }, { b: 2 }, { c: 3 }]
- *
- * @example
- *
- * splitObject({ name: 'robs', age: 25, tall: true, userName: 'sbor' });
- * // -> [{ name: 'robs }, { age: 25 }, { tall: true }, { userName: 'sbor' }]
- *
- * @example
- *
- * splitObject({});
- * // -> []
- */
+const splitObject = (toSeparate) => {
+  if (typeof toSeparate !== 'object') {
+    throw new TypeError('is not an object');
+  }
+  const arr = Object.keys(toSeparate).map((element) => ({
+    [element]: toSeparate[element],
+  }));
+
+  return arr;
+};
+
+splitObject({ a: 1, b: 2, c: 3 }); // -> [{ a: 1 }, { b: 2 }, { c: 3 }]
 ```
+
+---
+
+## Inspiration
+
+I inspired by many `websites` such
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and
+[W3school](https://www.w3schools.com/).
+
+![ Some jest coverage](img/Screenshot%20from%202022-11-14%2020-52-46.png)
