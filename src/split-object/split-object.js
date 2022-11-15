@@ -21,7 +21,10 @@
  * // -> []
  */
 
-exports.splitObject = (toSeparate) => {
+/**
+ *
+ */
+const splitObject = (toSeparate) => {
   if (typeof toSeparate !== 'object') {
     throw new TypeError('is not an object');
   }
@@ -31,3 +34,5 @@ exports.splitObject = (toSeparate) => {
 
   return arr;
 };
+
+module.exports = splitObject;

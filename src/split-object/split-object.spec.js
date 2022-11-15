@@ -1,15 +1,4 @@
-// import { splitObject } from './split-object.js';
-
-const splitObject = (toSeparate) => {
-  if (typeof toSeparate !== 'object') {
-    throw new TypeError('is not an object');
-  }
-  const arr = Object.keys(toSeparate).map((element) => ({
-    [element]: toSeparate[element],
-  }));
-
-  return arr;
-};
+const splitObject = require('./split-object');
 
 describe('Splits an object into multiple objects with one key/value pair each', () => {
   describe('The object to split into key/value pairs.', () => {
