@@ -1,7 +1,3 @@
- *flattens an array
- * Returns with a new array without modifying the original array
- */
-
 const deepFlat = (arrayToFlat = []) => {
   const result = arrayToFlat.flat(Infinity);
   return result;
