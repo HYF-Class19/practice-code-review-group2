@@ -1,5 +1,3 @@
-/**
-@@ -0,0 +1,36 @@
  *flattens an array
  * Returns with a new array without modifying the original array
  */
