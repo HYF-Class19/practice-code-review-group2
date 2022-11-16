@@ -32,7 +32,7 @@ helps you understand:
 > Docstring is adapted from
 > [lodash's flattenDeep](https://github.com/lodash/lodash/blob/4.17.15/lodash.js#L7330) -->
 
-Flat an Array: use a built-in array method
+# Flat an Array: use a built-in array method
 
 Takes a nested array and returns with one nested array,
 
