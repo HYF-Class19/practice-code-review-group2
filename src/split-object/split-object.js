@@ -21,9 +21,6 @@
  * // -> []
  */
 
-/**
- *
- */
 const splitObject = (toSeparate) => {
   if (typeof toSeparate !== 'object') {
     throw new TypeError('is not an object');

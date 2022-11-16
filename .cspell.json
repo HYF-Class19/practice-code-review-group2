@@ -1,6 +1,11 @@
 {
   "language": "en",
-  "words": [],
+  "words": [
+    "splitObject",
+    "toSeparate",
+    "TypeError",
+    "typeof"
+  ],
   "ignorePaths": [
     "node_modules/**",
     "package.json",
