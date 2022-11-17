@@ -4,9 +4,10 @@ Write a function that finds all the values shared between two arrays.
 
 ---
 
-##Strategy 
+## Strategy
 
-The code uses two functions. First is a Filter function to find the shared values among the two arrays. Second is a combination of indexOf and Push to remove the duplicated values.
+It uses two functions. First is Filter function to find the shared values of two arrays.
+Second is a combination of indexOf and Push to remove the duplicated values.
 
 ## Docstring
 
