@@ -4,8 +4,8 @@ Write a function that finds all the values shared between two arrays.
 
 ## Strategy
 
-It uses two functions: filter function to find the shared values of two arrays and
-a combination of indexOf and Push to remove the duplicated values.
+It uses two functions: filter function to find the shared values of two arrays
+and a combination of indexOf and Push to remove the duplicated values.
 
 ## Case
 
