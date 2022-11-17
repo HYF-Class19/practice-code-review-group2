@@ -1,19 +1,33 @@
-import { intersectSol } from './intersection.js';
+/* eslint-disable */
+
+// import { intersectSol } from './intersection.js';
+
+function intersectSol(arr1 = '', arr2 = '') {
+  return arr1.filter(Set.prototype.has, new Set(arr2));
+}
+function removeDuplicates(arr3) {
+  let uniqueArray = [];
+  for (let i = 0; i < arr3.length; i++) {
+    if (uniqueArray.indexOf(arr3[i]) == -1) {
+      uniqueArray.push(arr3[i]);
+    }
+  }
+  return uniqueArray;
+}
 
 for (const solution of [intersectSol]) {
   describe(`${solution.name}: creates new array with no duplicated values in the return`, () => {
-
-    //default return 
+    // default return
     describe('should return empty array if no argument', () => {
-        it('default parameters should return empty array', () => {
-          expect(solution([])).toEqual([]);
-        });
-        it('[]-- [] --> []', () => {
-          expect(solution([], [])).toEqual([]);
-        });
+      it('default parameters should return empty array', () => {
+        expect(solution([])).toEqual([]);
+      });
+      it('[]-- [] --> []', () => {
+        expect(solution([], [])).toEqual([]);
+      });
     });
 
-    //duplicated values  
+    // duplicated values
     describe('return new array with no duplicated elements', () => {
       it('[2, 1] -- [2, 3] --> [2]', () => {
         expect(solution([2, 1], [2, 3])).toEqual([2]);
@@ -25,13 +39,19 @@ for (const solution of [intersectSol]) {
         expect(solution([5, 5, 8, 7], [5, 7, 9])).toEqual([5, 5, 7]);
       });
       it('[e, e, h, g] -- [e, f, g] --> [e, g]', () => {
-        expect(solution(['e', 'e', 'h', 'g'], ['e', 'f', 'g'])).toEqual(['e', 'e', 'g']);
+        expect(solution(['e', 'e', 'h', 'g'], ['e', 'f', 'g'])).toEqual([
+          'e',
+          'e',
+          'g',
+        ]);
       });
       it('[car, bike, motor, car] -- [car, plane, bike] --> [car, bike]', () => {
-        expect(solution(['car', 'bike', 'motor', 'car'], ['car', 'plane', 'bike'])).toEqual(['car', 'bike', 'car']);
+        expect(
+          solution(['car', 'bike', 'motor', 'car'], ['car', 'plane', 'bike']),
+        ).toEqual(['car', 'bike', 'car']);
       });
-    
-     describe('function do not have side effects', () => {
+
+      describe('function do not have side effects', () => {
         it('should return new array', () => {
           const arr = [1, 2, 1];
           const values = [2, 3];
@@ -46,22 +66,19 @@ for (const solution of [intersectSol]) {
         });
       });
 
-
-      //empty array
+      // empty array
       describe('it should return empty array if no duplicated values ', () => {
         it('[a, b, c]-- [f, j, k] --> []', () => {
           expect(solution(['a', 'b', 'c'], ['f', 'j', 'k'])).toEqual([]);
         });
       });
 
-      //type error
+      // type error
       describe('if input is not array it should throw an error', () => {
         it('1, 2, 1 -- [1, 2, 3] -->Error', () => {
           expect(() => solution(1, 2, 1, [1, 2, 3])).toThrowError();
         });
-
       });
     });
   });
 }
-

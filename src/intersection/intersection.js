@@ -1,9 +1,14 @@
-/** 
- * Creates an array of values that are in both the first and the second arrays.
+/* eslint-disable */
+
+/**
+ * Creates an array of values that are in both the first
+ * and the second arrays.
  *
- * Repeated values are not duplicated in the return value, and the order of result values are determined by the first array.
+ * Repeated values are not duplicated in the return value,
+ * and the order of result values are determined by the first array.
  *
- * **Note:** This function returns a new array, and has no side-effects.
+ * **Note:** This function returns a new array,
+ * and has no side-effects.
  *
  * @param {Array} [array=[]] - The array to inspect.
  * @param {Array} [values=[]] - The values to include.
@@ -19,17 +24,23 @@
  * // -> [2]
  */
 
-//Solution 
+// Solution
 
-export function intersectSol(arr1= '', arr2 = '') {
+/**
+ *
+ */
+export function intersectSol(arr1 = '', arr2 = '') {
   return arr1.filter(Set.prototype.has, new Set(arr2));
 }
-function removeDuplicates(arr3){
-    let unique_array = []
-    for(let i = 0;i < arr3.length; i++){
-        if(unique_array.indexOf(arr3[i]) == -1){
-            unique_array.push(arr3[i])
-        }
+/**
+ *
+ */
+function removeDuplicates(arr3) {
+  let uniqueArray = [];
+  for (let i = 0; i < arr3.length; i++) {
+    if (uniqueArray.indexOf(arr3[i]) == -1) {
+      uniqueArray.push(arr3[i]);
     }
-    return unique_array
-};
+  }
+  return uniqueArray;
+}

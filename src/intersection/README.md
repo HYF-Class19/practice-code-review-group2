@@ -1,4 +1,5 @@
 # challenge name: strategy name: Intersection
+
 Write a function that finds all the values shared between two arrays.
 
 ```
@@ -39,7 +40,9 @@ helps you understand:
 
 # Inspiration
 
-Inspired by the coders discussion in [Stackoverflow](https://stackoverflow.com/) and rules in [Mozilla for Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 
+Inspired by the coders discussion in [Stackoverflow](https://stackoverflow.com/)
+and rules in
+[Mozilla for Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 <!--
   was there any code, blog post, video, ... that inspired your solution?
