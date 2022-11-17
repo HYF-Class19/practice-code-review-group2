@@ -1,6 +1,6 @@
 # Flat an Array: use a built-in array method
 
-Takes a nested array and returns with one nested array,
+Takes a nested array and returns with one nested array
 
 ---
 
