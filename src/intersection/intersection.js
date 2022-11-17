@@ -21,7 +21,7 @@
 
 //Solution 
 
-export function intersection(arr1= '', arr2 = '') {
+export function intersectSol(arr1= '', arr2 = '') {
   return arr1.filter(Set.prototype.has, new Set(arr2));
 }
 function removeDuplicates(arr3){

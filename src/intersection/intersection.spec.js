@@ -1,6 +1,6 @@
-import { intersection } from './intersection.js';
+import { intersectSol } from './intersection.js';
 
-for (const solution of [intersection]) {
+for (const solution of [intersectSol]) {
   describe(`${solution.name}: creates new array with no duplicated values in the return`, () => {
 
     //default return 
