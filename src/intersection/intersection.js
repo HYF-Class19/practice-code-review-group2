@@ -1,20 +1,4 @@
-# Intersection
-
-Write a function that finds all the values shared between two arrays.
-
----
-
-##Strategy 
-
-The code uses two functions. First is a Filter function to find the shared values among the two arrays. Second is a combination of indexOf and Push to remove the duplicated values.
-
-## Docstring
-
-Here's a starter docstring for your solutions. Feel free to rewrite it if that
-helps you understand:
-
-```js
-/**
+/** 
  * Creates an array of values that are in both the first and the second arrays.
  *
  * Repeated values are not duplicated in the return value, and the order of result values are determined by the first array.
@@ -34,7 +18,18 @@ helps you understand:
  * intersection([2, 1, 2], [2, 3]);
  * // -> [2]
  */
-```
 
-> Docstring is adapted from
-> [lodash's intersection](https://github.com/lodash/lodash/blob/4.17.15/lodash.js#L7498)
+//Solution 
+
+export function intersection(arr1= '', arr2 = '') {
+  return arr1.filter(Set.prototype.has, new Set(arr2));
+}
+function removeDuplicates(arr3){
+    let unique_array = []
+    for(let i = 0;i < arr3.length; i++){
+        if(unique_array.indexOf(arr3[i]) == -1){
+            unique_array.push(arr3[i])
+        }
+    }
+    return unique_array
+};
